@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Particle Text</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <!-- Subtle top hint -->
+  <div id="hint">Move your cursor to interact &nbsp;·&nbsp; Click a mode to transform</div>
+
+  <div id="ui">
+    <!-- Mode pill buttons -->
+    <div id="controls" role="group" aria-label="Animation mode">
+      <button class="btn active" data-mode="text"    aria-pressed="true">
+        <span class="btn-icon">¶</span> Text
+      </button>
+      <button class="btn" data-mode="wave"    aria-pressed="false">
+        <span class="btn-icon">∿</span> Wave
+      </button>
+      <button class="btn" data-mode="spiral"  aria-pressed="false">
+        <span class="btn-icon">◎</span> Spiral
+      </button>
+      <button class="btn" data-mode="scatter" aria-pressed="false">
+        <span class="btn-icon">✦</span> Scatter
+      </button>
+      <button class="btn" data-mode="gravity" aria-pressed="false">
+        <span class="btn-icon">↓</span> Gravity
+      </button>
+    </div>
+
+    <!-- Text input -->
+    <div id="input-row">
+      <div id="input-wrap">
+        <span id="input-icon">✎</span>
+        <input
+          id="text-input"
+          type="text"
+          maxlength="120"
+          placeholder="Type your own text…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+      <button id="apply-btn" title="Apply (Enter)">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
